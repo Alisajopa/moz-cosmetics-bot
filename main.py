@@ -1,7 +1,10 @@
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
+from dotenv import load_dotenv
 
-TOKEN = "7755831899:AAHa_dY3xNH0jv1Hn0yUVN4FFmUxFB3WQkw"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 catalog = {
     "Натуральное мыло": [
